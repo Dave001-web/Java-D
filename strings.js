@@ -36,6 +36,7 @@ const username = "    ade001     "
 console.log(username.trim());
 console.log(username.trimEnd());
 console.log(username.trimStart());
+lo
 
 // replace replaceALL
 const myName = "jane doe"
