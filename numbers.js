@@ -1,4 +1,4 @@
-//NUMBERS 8 0.9 3000
+b//NUMBERS 8 0.9 3000
 const num1 = 9
 const num2 = 8
 
