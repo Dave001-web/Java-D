@@ -21,7 +21,7 @@ console.log(balance);
 let likes = 0
 likes++
 likes--
-console.log (likes)
+console.log (likes) 
 
 
 
