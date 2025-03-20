@@ -1,23 +1,88 @@
-const cars = [
-  { name: "Lamborghini Huracan", rentPrice: 100, category: "sport" },
-  { name: "Range Rover Velar", rentPrice: 70, category: "suv" },
-  { name: "Audi R8", rentPrice: 120, category: "sport" },
-  { name: "Mustang", rentPrice: 80, category: "vintage" },
-  { name: "Porche 911", rentPrice: 120, category: "sport" },
-  { name: "Chevrolet Camaro 1970", rentPrice: 80, category: "vintage" },
-  { name: "Rolls Royce", rentPrice: 70, category: "sport" },
-  { name: "Tesla Model X", rentPrice: 120, category: "suv" },
-  { name: "BMW X5", rentPrice: 40, category: "suv" },
-  { name: "Volkswagen Beetle 1972", rentPrice: 30, category: "vintage" },
-];
-const meals = [
-  {
-    meal: {
-      name: "Sushi",
-      price: 45,
-      category: "Side",
-    },
-  },
-];
+try {
+    console.log(age);
+    //do smth
+} catch (error) {
+    //error.message = "sth broke"
+    // handle the error
+    // error message
+    console.log(error.message);
+}
 
-console.log(meal[0].meal.name);
+// optional chaining
+const person = {
+    name: "bob",
+    age: 76,
+}
+console.log(person.job);// will not break code
+console.log(person.job);//
+let error = {}
+//
+
+error?.firstName?.message
+
+// nullish coalescence
+// 
+const image = "car"
+const whatsappAvatar = image ?? "Avatar image"
+console.log(whatsappAvatar);
+ 
+
+
+let balance = 5000
+let amount = 3000
+let pin = 1234
+let attempts = 3
+
+console.log(checkBalance());
+
+function withdrawAmount() {
+    if (amount <= balance) {
+        balance -= amount;
+        return `insufficient funds`
+    } else {
+        return `Transaction Successful`
+    }
+}
+console.log(withdrawAmount());
+
+function depositAmount() {
+    balance += 3000
+    return `Deposit successful`
+}
+console.log(depositAmount());
+
+function checkPin(enteredPin) {
+    while(attempts > 0){
+        if (enteredPin === pin) {
+          return `Correct Pin`;
+        } else {
+          attempts--;
+          return `invalid pin, Try Again`;
+        }
+    }
+    return "Your Card has been Blocked"
+}
+function startAtm(choice) {
+    if(choice === 1){
+        // withdraw
+        withdrawAmount(1000)
+    } else if (choice === 2){
+        //deposit
+        depositAmount(3000)
+    }else if (choice === 3) {
+        //check balance
+        checkBalance()
+    }else if (choice === 4) {
+        // exit
+        return "Thank you for banking with us"
+    } else {
+        // invalid option
+        return "Invalid option, try again"
+    }
+}
+
+function checkBalance()  {
+return `Your current balance is ${balance}`
+}
+
+console.log(checkPin(4563));
