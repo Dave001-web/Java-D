@@ -1,0 +1,21 @@
+.mybtn {
+    background-color: blue;
+    color: white;
+    width: 130px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+}
+
+.mysection {
+    background-color: blue;
+    width: 300px;
+    height: 130px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    align-items: center;
+}
+small {
+    display: none;
+}
